@@ -73,6 +73,7 @@ func layerArchive(tarfile string) (io.Reader, error) {
 
 func init() {
 	os.Setenv("TEST", "1")
+	os.Setenv("DEBUG", "1")
 
 	// Hack to run sys init during unit testing
 	if selfPath := utils.SelfPath(); selfPath == "/sbin/init" || selfPath == "/.dockerinit" {
